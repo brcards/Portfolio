@@ -38,19 +38,19 @@ gatsby develop
 ## Folder Structure
 
 ```bash
-├── content  				# Content/Data for the static site
+├── content                 # Content/Data for the static site
 │   ├── photos              
-│   	└── images			# All images in this dir get displayed on the photos page, their file names are the image alts
+│       └── images          # All images in this dir get displayed on the photos page, their file names are the image alts
 │   ├── projects            
-│   	├── photos			# Photos referenced in projects.json
-|		└── projects.json	# Data for the projects page
-├── scripts					# Useful scripts (see scripts section for more detail)
-├── src    					
+│       ├── photos          # Photos referenced in projects.json
+|       └── projects.json   # Data for the projects page
+├── scripts                 # Useful scripts (see scripts section for more detail)
+├── src                     
 │   ├── common              # Common files for the application that don't belong to a feature
 │   ├── modules             # 'Modules' or 'features' of the application 
-│   ├── pages             	# Gatsby pages
+│   ├── pages               # Gatsby pages
 │   ├── resources           # Any general resources such as not content specific images
-│   └── testing            	# Testing utilities and mocks
+│   └── testing             # Testing utilities and mocks
 ```
 
 ## Scripts
@@ -74,4 +74,3 @@ Uses [Jest](https://jestjs.io/) and [Testing-Library](https://testing-library.co
 ```
 npm run test
 ```
-
