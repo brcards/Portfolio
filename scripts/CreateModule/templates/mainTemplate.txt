@@ -1,0 +1,11 @@
+import React from 'react';
+
+const {{moduleName}} = () => {
+    return (
+        <div>
+
+        </div>
+    );
+};
+
+export default {{moduleName}};

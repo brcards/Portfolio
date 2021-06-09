@@ -1,0 +1,1 @@
+jest.mock("gatsby-plugin-image");
