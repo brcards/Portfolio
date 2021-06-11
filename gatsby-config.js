@@ -20,8 +20,17 @@ module.exports = {
                 name: `resources`,
                 path: `${__dirname}/src/resources/`,
             },
+        },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Bryan Carder Portfolio`,
+                short_name: `Portfolio`,
+                start_url: `/`,
+                display: `standalone`,
+                icon: `src/resources/images/favicon.png`, // This path is relative to the root of the site.
+            },
         }
-
     ],
     siteMetadata: {
         title: 'Bryan Carder',

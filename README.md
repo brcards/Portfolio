@@ -64,7 +64,7 @@ Creates a new module under '/src/modules' based on file templates.
 #### Usage
 
 ```javascript
-npm run create-template NewModuleName
+npm run create-module NewModuleName
 ```
 
 ## Testing
