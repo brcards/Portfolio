@@ -46,7 +46,7 @@ const Works = ({data}) => {
                             <CardText>
                                 {project.node.description}
                             </CardText>
-                            {project.node.link.href !== undefined ?
+                            {project.node.link.href ?
                                 <CardLink href={project.node.link.href} target="_blank">
                                     <OpenInNewIcon />
                                 </CardLink> : ""
