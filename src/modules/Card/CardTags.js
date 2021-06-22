@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 const CardTags = styled.div`
+    position: absolute;
+    bottom: 0;
     padding: 0.5em;
     > * {
-        margin-left: 0.6em;
+        margin-right: 0.6em;
     }
 `;
 

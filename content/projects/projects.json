@@ -4,8 +4,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
     "year": "2020",
     "link": {
-      "title": "",
-      "href": ""
+      "href": "https://www.google.ca"
     },
     "technologies": ["Java", "C#", "Python"],
     "image" : "images/sample_image_1.jpg"

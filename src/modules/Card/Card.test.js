@@ -9,6 +9,8 @@ import {
     CardText
 } from "src/modules/Card";
 import Tag from "src/modules/Tag";
+import CardHeading from "src/modules/Card/CardHeading";
+import CardLink from "src/modules/Card/CardLink";
 
 describe("Card", () => {
     it('renders the card', () => {
@@ -43,10 +45,25 @@ describe("CardTags", () => {
 });
 
 describe("CardText", () => {
-    it('renders the test', () => {
-        const {getByText} = render(<CardText title="card title">test card text</CardText>);
+    it('renders the text', () => {
+        const {getByText} = render(<CardText>test card text</CardText>);
 
-        getByText(/card title/i);
+        getByText(/test card text/i);
+    });
+});
+
+describe("CardHeading", () => {
+    it('renders the heading', () => {
+        const {getByText} = render(<CardHeading>test card text</CardHeading>);
+
+        getByText(/test card text/i);
+    });
+});
+
+describe("CardLink", () => {
+    it('renders the link', () => {
+        const {getByText} = render(<CardLink>test card text</CardLink>);
+
         getByText(/test card text/i);
     });
 });

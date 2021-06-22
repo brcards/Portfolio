@@ -11,7 +11,7 @@ const ImageBackground = styled(Paper)`
 
 const StyledImage = styled(GatsbyImage)`
     position: relative;
-    display: block;
+    display: block !important;
     cursor: pointer;
     transition: transform .5s;
     min-height: 200px;

@@ -11,12 +11,13 @@ const IndexPage = () => {
             <Heading level={2}>Hello!</Heading>
             <Paragraph>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam <a href="https://www.google.ca">arnum</a>
             </Paragraph>
 
             <Paragraph>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
             </Paragraph>
         </React.Fragment>
     )

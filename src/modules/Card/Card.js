@@ -6,7 +6,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const StyledCard = styled(MUICard)`
-    background-color: ${props => props.theme.colours.background[1]}
+    background-color: ${props => props.theme.colours.background[1]};
 `;
 
 const Card = ({gatsbyImageData, title, children, tags}) => {

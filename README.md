@@ -8,13 +8,6 @@ See the production deployment [here](www.carderb.com).
 
 See the projects Trello board [here](https://trello.com/b/mSCcGanZ/portfolio).
 
-## Table of Contents
-
-1. [Development](#development)
-2. [Folder Structure](#folder-structure)
-3. [Scripts](#scripts)
-4. [Testing](#testing)
-
 ## Development
 
 Project uses [Gatsby](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter) so if you are interested in playing around with it their documentation is a good place to start.

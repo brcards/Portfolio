@@ -2,10 +2,20 @@ import React from 'react';
 import styled from "styled-components";
 import {graphql} from "gatsby";
 import Heading from "src/modules/Heading";
-import {Card, CardContent, CardImage, CardTags, CardText} from "src/modules/Card";
+import {
+    Card,
+    CardContent,
+    CardImage,
+    CardTags,
+    CardText,
+    CardLink,
+    CardHeading,
+    CardSubHeading
+} from "src/modules/Card";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import Tag from "src/modules/Tag";
 import {ApplicationHelmet} from "src/modules/Application";
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 
 const CardContainer = styled.div`
     margin-bottom: 30px;
@@ -27,9 +37,20 @@ const Works = ({data}) => {
                             />
                         </CardImage>
                         <CardContent>
-                            <CardText title={project.node.title}>
+                            <CardHeading>
+                                {project.node.title}
+                            </CardHeading>
+                            <CardSubHeading>
+                                {project.node.year}
+                            </CardSubHeading>
+                            <CardText>
                                 {project.node.description}
                             </CardText>
+                            {project.node.link.href !== undefined ?
+                                <CardLink href={project.node.link.href} target="_blank">
+                                    <OpenInNewIcon />
+                                </CardLink> : ""
+                            }
                             <CardTags>
                                 {project.node.technologies.map((tag) => <Tag key={tag}>{tag}</Tag>)}
                             </CardTags>
@@ -50,7 +71,6 @@ export const query = graphql`
                     title
                     year
                     link {
-                        title
                         href
                     }
                     technologies

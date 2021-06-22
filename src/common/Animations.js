@@ -7,7 +7,6 @@ const HoverUnderline = css`
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
-    padding-bottom: 0.2em;
     transition: background-size .3s;
     
     &:hover {

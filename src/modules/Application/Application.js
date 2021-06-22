@@ -19,6 +19,14 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 14px;
         background-color: ${props => props.theme.colours.background[0]};
+    },
+    a {
+        &:link {
+            color: ${props => props.theme.colours.primary};
+        }
+        &:visited {
+            color: ${props => props.theme.colours.secondary};
+        }
     }
 `;
 
