@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 const StyledGrid = styled(Grid)`
     height: 100vh;
     border-left: 2px solid ${props => props.theme.colours.primary};
-    @media (max-width: ${props => props.theme.breakpoints.md}) {
+    @media (max-width: ${props => props.theme.breakpoints.lg}) {
         border-left: 0px;
         border-top: 2px solid ${props => props.theme.colours.primary};
     }
