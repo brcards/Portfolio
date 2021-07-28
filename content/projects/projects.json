@@ -7,6 +7,7 @@
       "href": "https://www.google.ca"
     },
     "technologies": ["Java", "C#", "Python"],
+    "primary_tag": "",
     "image" : "images/sample_image_1.jpg"
   }
 ]

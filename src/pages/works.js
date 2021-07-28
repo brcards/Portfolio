@@ -16,6 +16,7 @@ import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import Tag from "src/modules/Tag";
 import {ApplicationHelmet} from "src/modules/Application";
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+import CardQuickInfo from "src/modules/Card/CardQuickInfo";
 
 const CardContainer = styled.div`
     margin-bottom: 30px;
@@ -46,11 +47,18 @@ const Works = ({data}) => {
                             <CardText>
                                 {project.node.description}
                             </CardText>
-                            {project.node.link.href ?
-                                <CardLink href={project.node.link.href} target="_blank">
-                                    <OpenInNewIcon />
-                                </CardLink> : ""
-                            }
+                            <CardQuickInfo>
+                                {project.node.primary_tag &&
+                                    <Tag>
+                                        {project.node.primary_tag}
+                                    </Tag>
+                                }
+                                {project.node.link.href &&
+                                    <CardLink href={project.node.link.href} target="_blank">
+                                        <OpenInNewIcon />
+                                    </CardLink>
+                                }
+                            </CardQuickInfo>
                             <CardTags>
                                 {project.node.technologies.map((tag) => <Tag key={tag}>{tag}</Tag>)}
                             </CardTags>
@@ -73,6 +81,7 @@ export const query = graphql`
                     link {
                         href
                     }
+                    primary_tag
                     technologies
                     image {
                         childImageSharp {

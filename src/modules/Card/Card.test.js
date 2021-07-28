@@ -11,6 +11,7 @@ import {
 import Tag from "src/modules/Tag";
 import CardHeading from "src/modules/Card/CardHeading";
 import CardLink from "src/modules/Card/CardLink";
+import CardQuickInfo from "src/modules/Card/CardQuickInfo";
 
 describe("Card", () => {
     it('renders the card', () => {
@@ -65,5 +66,13 @@ describe("CardLink", () => {
         const {getByText} = render(<CardLink>test card text</CardLink>);
 
         getByText(/test card text/i);
+    });
+});
+
+describe("CardQuickInfo", () => {
+    it('renders the link', () => {
+        const {getByText} = render(<CardQuickInfo>test quick info</CardQuickInfo>);
+
+        getByText(/test quick info/i);
     });
 });
