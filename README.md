@@ -10,7 +10,7 @@ See the projects Trello board [here](https://trello.com/b/mSCcGanZ/portfolio).
 
 ## Development
 
-Project uses [Gatsby](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter) so if you are interested in playing around with it their documentation is a good place to start.
+Project uses [NextJS](https://nextjs.org/docs) so if you are interested in playing around with it their documentation is a good place to start.
 
 ### Quick Start
 
@@ -25,30 +25,31 @@ npm install
 **Start the development server:**
 
 ```javascript
-gatsby develop
+npm run dev
 ```
 
 ## Folder Structure
 
 ```bash
-├── content                 # Content/Data for the static site
+├── public                  # Public content
 │   ├── photos              
 │       └── images          # All images in this dir get displayed on the photos page, their file names are the image alts
 │   ├── projects            
-│       ├── photos          # Photos referenced in projects.json
+│       ├── images          # Photos referenced in projects.json
 |       └── projects.json   # Data for the projects page
 ├── scripts                 # Useful scripts (see scripts section for more detail)
-├── src                     
+├── src
+|   ├── api                 # Data retrieval                  
 │   ├── common              # Common files for the application that don't belong to a feature
 │   ├── modules             # 'Modules' or 'features' of the application 
-│   ├── pages               # Gatsby pages
-│   ├── resources           # Any general resources such as not content specific images
+│   ├── app                 # Nextjs primary directory
+│   ├── resources           # Any general resources such as non content specific images
 │   └── testing             # Testing utilities and mocks
 ```
 
 ## Scripts
 
-Most scripts come bundled from Gatsby, any scripts below are custom and aim to speed up development.
+Most scripts come bundled from Nextjs, any scripts below are custom and aim to speed up development.
 
 ### create-module
 
@@ -58,6 +59,16 @@ Creates a new module under '/src/modules' based on file templates.
 
 ```javascript
 npm run create-module NewModuleName
+```
+
+### optimize-gallery
+
+Creates size reduced versions of gallery images, used for thumbnails
+
+#### Usage
+
+```javascript
+npm run optimize-gallery
 ```
 
 ## Testing

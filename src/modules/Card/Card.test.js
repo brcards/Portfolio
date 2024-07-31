@@ -1,7 +1,7 @@
 import React from "react"
 import '@testing-library/jest-dom'
 import {render} from "src/testing/testUtils";
-import Card from "@material-ui/core/Card";
+import Card from "@mui/material/Card";
 import {
     CardContent,
     CardImage,
@@ -31,7 +31,7 @@ describe("CardContent", () => {
 
 describe("CardImage", () => {
     it('renders the card', () => {
-        const {getByRole} = render(<CardImage><img src="" alt="test" /></CardImage>);
+        const {getByRole} = render(<CardImage src="/example.jpg" alt="test alt" />);
 
         getByRole('img');
     });

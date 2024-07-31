@@ -5,6 +5,7 @@ import {render} from "src/testing/testUtils";
 import AvatarLink from "src/modules/Avatar/AvatarLink";
 import AvatarImage from "src/modules/Avatar/AvatarImage";
 import {Avatar} from "src/modules/Avatar/index";
+import MyImage from "src/modules/Image/Image";
 
 describe("Avatar", () => {
     it('renders the avatar', () => {
@@ -33,7 +34,10 @@ describe("AvatarLink", () => {
 
 describe("AvatarImage", () => {
     it('renders the avatar image', () => {
-        const {getByRole} = render(<AvatarImage><img src="" alt="headshot" /></AvatarImage>);
+        const {getByRole} = render(
+            <AvatarImage href={"href"}>
+                <MyImage src="/example.jpg" alt="headshot" width={120} height={120}/>
+            </AvatarImage>);
 
         getByRole('img');
     });

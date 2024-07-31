@@ -2,7 +2,7 @@ import React from "react"
 import '@testing-library/jest-dom'
 import {useOnScreen} from "src/modules/Screen/Screen";
 import {setupMockIntersectionObserver, MockIntersectionObserver} from "src/testing/__mocks__/IntersectionObserver";
-import { renderHook, act } from '@testing-library/react-hooks'
+import { renderHook, act } from '@testing-library/react'
 
 beforeEach(() => {
     setupMockIntersectionObserver();

@@ -16,14 +16,4 @@ const render = (component) => {
     );
 };
 
-const getMeta = (metaName) => {
-    const metas = document.getElementsByTagName("meta");
-    for (let i = 0; i < metas.length; i += 1) {
-        if (metas[i].getAttribute("name") === metaName) {
-            return metas[i].getAttribute("content");
-        }
-    }
-    return "";
-};
-
-export {render, getMeta};
+export {render};

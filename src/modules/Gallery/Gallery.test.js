@@ -18,7 +18,11 @@ describe("Gallery", () => {
 
 describe("GalleryImage", () => {
     it('renders a gallery image', () => {
-        const {getByRole} = render(<Gallery><GalleryImage /></Gallery>);
+        const {getByRole} = render(
+            <Gallery>
+                <GalleryImage src="/example.jpg" alt="example" width={120} height={120}/>
+            </Gallery>
+        );
         getByRole('img');
     });
 });

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
-import ListItem from "@material-ui/core/ListItem";
-import List from "@material-ui/core/List";
-import ListItemText from "@material-ui/core/ListItemText";
+import ListItem from "@mui/material/ListItem";
+import List from "@mui/material/List";
+import ListItemText from "@mui/material/ListItemText";
 import Drawer from "src/modules/Drawer";
-import Divider from "@material-ui/core/Divider";
+import Divider from "@mui/material/Divider";
 import SettingsTheme from "src/modules/Settings/SettingsTheme";
 import SettingsLanguage from "src/modules/Settings/SettingsLanguage";
 

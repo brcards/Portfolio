@@ -1,8 +1,8 @@
 import React from 'react';
 import {ThemeContext} from "src/modules/Theme";
-import ListItem from "@material-ui/core/ListItem";
-import WbSunnyIcon from "@material-ui/icons/WbSunny";
-import NightsStayIcon from "@material-ui/icons/NightsStay";
+import ListItem from "@mui/material/ListItem";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import NightsStayIcon from "@mui/icons-material/NightsStay";
 import SettingsListItemText from "src/modules/Settings/SettingsListItemText";
 import SettingsListItemIcon from "src/modules/Settings/SettingsListItemIcon";
 

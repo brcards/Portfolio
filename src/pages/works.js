@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {graphql} from "gatsby";
 import Heading from "src/modules/Heading";
 import {
     Card,
@@ -12,90 +11,64 @@ import {
     CardHeading,
     CardSubHeading
 } from "src/modules/Card";
-import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import Tag from "src/modules/Tag";
-import {ApplicationHelmet} from "src/modules/Application";
-import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+import Application, {ApplicationHelmet} from "src/modules/Application";
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CardQuickInfo from "src/modules/Card/CardQuickInfo";
+import WorksData from "public/projects/projects.json"
 
 const CardContainer = styled.div`
     margin-bottom: 30px;
 `;
 
-const Works = ({data}) => {
+const StyledCardImage = styled(CardImage)`
+    position: relative;
+`;
+
+
+const Works = () => {
     return (
-        <div>
-            <ApplicationHelmet title="Bryan Carder Works" description="Works page for Bryan Carders portfolio site" />
+        <Application>
+            <ApplicationHelmet title="Bryan Carder Works" description="Works page for Bryan Carders portfolio site"/>
             <Heading level={1}>
-                Projects I've Worked On
+                Projects I&apos;ve Worked On
             </Heading>
-            {data.allProjectsJson.edges.map(project => (
-                <CardContainer key={project.node.title}>
+            {WorksData.map(project => (
+                <CardContainer key={project.title}>
                     <Card>
-                        <CardImage>
-                            <GatsbyImage image={getImage(project.node.image.childImageSharp.gatsbyImageData)}
-                                         alt={project.node.title}
-                            />
-                        </CardImage>
+                        <StyledCardImage src={"/projects/images/" + project.image}
+                                         alt={project.title} />
                         <CardContent>
                             <CardHeading>
-                                {project.node.title}
+                                {project.title}
                             </CardHeading>
                             <CardSubHeading>
-                                {project.node.year}
+                                {project.year}
                             </CardSubHeading>
                             <CardText>
-                                {project.node.description}
+                                {project.description}
                             </CardText>
                             <CardQuickInfo>
-                                {project.node.primary_tag &&
+                                {project.primary_tag &&
                                     <Tag>
-                                        {project.node.primary_tag}
+                                        {project.primary_tag}
                                     </Tag>
                                 }
-                                {project.node.link.href &&
-                                    <CardLink href={project.node.link.href} target="_blank">
+                                {project.link.href &&
+                                    <CardLink href={project.link.href} target="_blank">
                                         <OpenInNewIcon />
                                     </CardLink>
                                 }
                             </CardQuickInfo>
                             <CardTags>
-                                {project.node.technologies.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+                                {project.technologies.map((tag) => <Tag key={tag}>{tag}</Tag>)}
                             </CardTags>
                         </CardContent>
                     </Card>
                 </CardContainer>
             ))}
-        </div>
+        </Application>
     );
 };
-
-export const query = graphql`
-    query {
-        allProjectsJson {
-            edges {
-                node {
-                    description
-                    title
-                    year
-                    link {
-                        href
-                    }
-                    primary_tag
-                    technologies
-                    image {
-                        childImageSharp {
-                            gatsbyImageData(
-                                width: 800, 
-                                quality: 75, 
-                                placeholder: BLURRED
-                            )
-                        }
-                    }
-                }
-            }
-        }
-    }
-`;
 
 export default Works;
