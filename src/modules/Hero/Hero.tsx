@@ -30,15 +30,15 @@ const Hero: React.FC<HeroProps> = () => {
                     <StyledHeadShot src={HeadShot} alt="Headshot" placeholder="blur" />
                 </AvatarImage>
                 <AvatarDetails>
-                    <AvatarHeading name="Bryan Carder" title="Software Engineer" />
+                    <AvatarHeading name="John Doe" title="Profession" />
                     <AvatarActions>
-                        <AvatarLink aria-label="github" href="https://github.com/brcards">
+                        <AvatarLink aria-label="github" href="">
                             <GitHubIcon fontSize='inherit'/>
                         </AvatarLink>
-                        <AvatarLink aria-label="email" href="mailto:brcarderweb@gmail.com">
+                        <AvatarLink aria-label="email" href="">
                             <EmailIcon fontSize='inherit'/>
                         </AvatarLink>
-                        <AvatarLink aria-label="linkdin"  href="https://www.linkedin.com/in/bryan-carder-9a012883/">
+                        <AvatarLink aria-label="linkdin"  href="">
                             <LinkedInIcon fontSize='inherit'/>
                         </AvatarLink>
                     </AvatarActions>

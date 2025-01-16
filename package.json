@@ -27,7 +27,7 @@
     "imagemin": "^9.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^10.0.0",
-    "next": "14.2.4",
+    "next": "^15.1.4",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.0 || ^18.0.0",

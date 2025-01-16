@@ -63,7 +63,7 @@ const Application: React.FC<ApplicationProps> = ({children}) => {
     };
 
     return (
-        <ApplicationThemeProvider>
+        <>
             <GlobalStyle/>
 
             <ApplicationContainer container spacing={0}>
@@ -86,7 +86,7 @@ const Application: React.FC<ApplicationProps> = ({children}) => {
             <noscript>
                 <Alert severity="error">Please enable JavaScript to use this site</Alert>
             </noscript>
-        </ApplicationThemeProvider>
+        </>
     )
 };
 

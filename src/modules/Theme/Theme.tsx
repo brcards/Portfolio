@@ -30,17 +30,23 @@ const ApplicationThemeProvider: React.FC<ThemeProvideProps> = ({children}) => {
     const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
 
     useEffect(() => {
-        if (prefersDark) {
+        const storedTheme = localStorage.getItem("theme");
+
+        if (storedTheme) {
+            setTheme(storedTheme);
+
+        } else if (prefersDark) {
             setTheme("dark");
         }
-    },[prefersDark, setTheme]);
+    }, [prefersDark]);
+
+    useEffect(() => {
+        localStorage.setItem("theme", theme);
+    }, [theme]);
 
     const toggleTheme = () => {
-        if(theme === "light"){
-            setTheme("dark");
-        } else {
-            setTheme("light");
-        }
+        const newTheme = theme === "light" ? "dark" : "light";
+        setTheme(newTheme); // Update the theme state
     };
 
     return (
