@@ -40,13 +40,10 @@ const ApplicationThemeProvider: React.FC<ThemeProvideProps> = ({children}) => {
         }
     }, [prefersDark]);
 
-    useEffect(() => {
-        localStorage.setItem("theme", theme);
-    }, [theme]);
-
     const toggleTheme = () => {
         const newTheme = theme === "light" ? "dark" : "light";
         setTheme(newTheme); // Update the theme state
+        localStorage.setItem("theme", newTheme);
     };
 
     return (
